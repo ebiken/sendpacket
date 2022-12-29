@@ -1,0 +1,11 @@
+packet:
+  send_iface: "ens1f0"
+  ether:
+    src: "02:03:04:05:06:01"
+    dst: "00:90:fb:65:d6:fe"
+  ip:
+    src: "10.0.0.100"
+    dst: "10.96.0.1"
+  udp:
+    sport: 1234
+    dport: 4321

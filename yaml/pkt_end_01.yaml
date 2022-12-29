@@ -1,0 +1,19 @@
+packet:
+  send_iface: "ens1f0"
+  ether:
+    src: "02:03:04:05:06:01"
+    dst: "00:90:fb:65:d6:fe"
+  ipv6:
+    src: "2001:db8::1"
+    dst: "2001:db8:ffff:1:1::"
+  srh: #IPv6ExtHdrSegmentRouting
+    segleft: 0
+    addresses:
+      - "2001:db8:ffff:1:1::"
+  inner_packet:
+    ip:
+      src: "10.0.99.100"
+      dst: "10.0.0.100"
+    udp:
+      sport: 1234
+      dport: 4321
