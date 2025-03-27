@@ -19,3 +19,8 @@ else:
 print(f"sending {num} packets to {interface}")
 
 sendp(frm,iface=interface, count=int(num))
+
+### To send faster ###
+# prerequisit: sudo apt install tcpreplay
+#
+#sendpfast(frm,iface=interface, pps=9999999, loop=int(num))
